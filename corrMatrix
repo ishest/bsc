@@ -1,0 +1,8 @@
+import quandl
+import numpy as np
+from scipy.stats.stats import pearsonr
+
+
+btc = quandl.get(['BITFINEX/BTCUSD.4', 'BITFINEX/ETHUSD.4'], start_date="2018-01-01")
+corrMatrix = np.corrcoef(btc)
+print(corrMatrix)
